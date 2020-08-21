@@ -1,4 +1,4 @@
-import { setFormPrevent } from './components/form.js';
+import { setFormPrevent, setFocus } from './components/form.js';
 import { addTask } from './components/task.js';
 import { resetData } from './components/reset.js';
 import { useTaskProperties } from './components/taskProperties.js';
@@ -13,3 +13,4 @@ useTaskProperties();
 templateCounterTasks();
 sortTasks();
 chooseTheme();
+setFocus();

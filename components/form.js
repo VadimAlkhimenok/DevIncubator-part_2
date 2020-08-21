@@ -29,4 +29,12 @@ const setResetForm = () => ({
 
 const setResetCheckbox = () => Array.from(checkboxs).forEach(checkbox => checkbox.checked = false);
 
-export { setFormPrevent, setBtnSubmitDisabled, getDataForm, setResetForm, setResetCheckbox };
+const setFocus = () => {
+    open_modal.addEventListener('click', () => {
+        setTimeout(() => {
+            document.querySelector('#inputTitle').focus()
+        }, 1000)
+    })
+};
+
+export { setFormPrevent, setBtnSubmitDisabled, getDataForm, setResetForm, setResetCheckbox, setFocus };

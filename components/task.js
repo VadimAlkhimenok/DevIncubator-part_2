@@ -1,4 +1,4 @@
-import { getDataForm } from './form.js';
+import { getDataForm, setFocus } from './form.js';
 import { getCurrentDate } from './date.js';
 import { counterCurrentTasks } from './counterTasks.js';
 import { setColorTask } from './colorTask.js';
