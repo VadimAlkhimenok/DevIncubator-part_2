@@ -33,7 +33,7 @@ const setFocus = () => {
     open_modal.addEventListener('click', () => {
         setTimeout(() => {
             document.querySelector('#inputTitle').focus()
-        }, 1000)
+        }, 1000 / 2)
     })
 };
 
