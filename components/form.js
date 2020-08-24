@@ -27,14 +27,14 @@ const setResetForm = () => ({
     priority: false,
 });
 
-const setResetCheckbox = () => Array.from(checkboxs).forEach(checkbox => checkbox.checked = false);
-
 const setFocus = () => {
     open_modal.addEventListener('click', () => {
         setTimeout(() => {
-            document.querySelector('#inputTitle').focus()
-        }, 1000 / 2)
+            document.querySelector('#inputTitle').focus();
+        }, 0)
     })
 };
+
+const setResetCheckbox = () => Array.from(checkboxs).forEach(checkbox => checkbox.checked = false);
 
 export { setFormPrevent, setBtnSubmitDisabled, getDataForm, setResetForm, setResetCheckbox, setFocus };

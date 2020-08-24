@@ -1,5 +1,6 @@
 import { counterCompletedTasks, counterCurrentTasks } from "./counterTasks.js";
 
+
 const deleteTask = tag => {
     tag.closest('.parents').remove();
 };
@@ -12,6 +13,7 @@ const editTask = tag => {
     open_modal.click();
 
     btn_add.textContent = 'Save changes';
+    exampleModalLabel.textContent = 'Edit task';
 
     let task = tag.closest('.parents');
 
@@ -22,7 +24,10 @@ const editTask = tag => {
     let inputTitle = document.querySelector('#inputTitle');
     let inputText = document.querySelector('#inputText');
 
-    priority === 'Low priority' ? Low.checked = true : 'Medium priority' ? Medium.checked = true : 'High priority' ? innerHeight.checked = true : null;
+    priority === 'Low priority' ? Low.checked = true :
+        priority === 'Medium priority' ? Medium.checked = true :
+        priority === 'High priority' ? High.checked = true :
+        null;
     inputTitle.value = title;
     inputText.value = text;
 
@@ -32,13 +37,14 @@ const editTask = tag => {
     })
 };
 
-const setBtnDisabled = btn => {
-    btn.disabled = true;
+export const deleteBtnAfterCompleted = () => {
+    completedTasks.querySelectorAll('#btn_edit, #btn_complete').forEach(btn => btn.classList.add('hide'));
+
 };
 
-const deleteBtnAfterCompleted = () => {
-    completedTasks.querySelectorAll('#btn_edit, #btn_complete').forEach(btn => btn.remove());
-}
+export const appendBtnAfterReturnInCurrent = () => {
+    currentTasks.querySelectorAll('#btn_edit, #btn_complete').forEach(btn => btn.classList.remove('hide'));
+};
 
 export const useTaskProperties = () => {
     currentTasks.addEventListener('click', event => {
@@ -48,10 +54,6 @@ export const useTaskProperties = () => {
 
         if (event.target.id === 'btn_complete') {
             completeTask(event.target);
-
-            setBtnDisabled(btn_edit);
-            setBtnDisabled(btn_complete);
-
             counterCompletedTasks();
         };
 

@@ -5,6 +5,8 @@ import { useTaskProperties } from './components/taskProperties.js';
 import { templateCounterTasks } from './components/counterTasks.js';
 import { sortTasks } from './components/sortTasks.js';
 import { chooseTheme } from './components/theme.js';
+import { authorization } from './components/auth/authorization.js';
+
 
 setFormPrevent();
 addTask();
@@ -14,3 +16,4 @@ templateCounterTasks();
 sortTasks();
 chooseTheme();
 setFocus();
+authorization();
