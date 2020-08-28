@@ -19,4 +19,4 @@ export const sortTasks = () => {
         sort();
         btn_increase.disabled = false;
     });
-}
+} 

@@ -1,6 +1,6 @@
 const templateCounterTasks = () => {
-    currentTasks.insertAdjacentHTML('beforebegin', `<p class="currentTasks">Current tasks: ${ 0 }</p>`);
-    completedTasks.insertAdjacentHTML('beforebegin', `<p class="completedTasks">Completed tasks: ${ 0 }</p>`);
+    currentTasks.insertAdjacentHTML('beforebegin', `<p class="currentTasks" id="current">Current tasks: ${ 0 }</p>`);
+    completedTasks.insertAdjacentHTML('beforebegin', `<p class="completedTasks" id="completed">Completed tasks: ${ 0 }</p>`);
 };
 
 const counterCurrentTasks = () => {

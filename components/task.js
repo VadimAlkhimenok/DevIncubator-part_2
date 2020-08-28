@@ -1,9 +1,10 @@
-import { getDataForm } from './form.js';
+import { getDataForm } from './modalAddTasks.js';
 import { getCurrentDate } from './date.js';
 import { counterCurrentTasks } from './counterTasks.js';
-import { localstorageTasks } from './storage.js';
+import { saveTasksUser, filterTasks } from './storage.js';
 import { setColorTask } from './colorTask.js';
 import { dragAndDropCompleted, dragAndDropCurrent } from './dragAndDrop.js';
+import { dataProfileUser } from './auth/authorization.js';
 
 let counter = 0;
 
@@ -43,7 +44,7 @@ export const addTask = () => {
 
         dragAndDropCompleted();
         dragAndDropCurrent();
-        localstorageTasks();
+        saveTasksUser(dataProfileUser.tasks);
         counterCurrentTasks();
     });
-};
+}; 

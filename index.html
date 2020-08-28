@@ -37,6 +37,9 @@
                 </div>
             </div>
             <div class="auth" id="auth">
+                <button type="button" class="btn btn-link" id="btn__profile_name">
+                    Vadim Alkhimenok
+                </button>
                 <button class="btn btn-warning" id="btn__signIn" type="button">
                     Sign in
                 </button>
@@ -45,7 +48,7 @@
                 </button>
             </div>
         </nav>
-        <div class="row justify-content-center" id="main__text">
+        <div class="row justify-content-center main" id="main__text">
             <div class="col-10 hide" id="main__text_tasks">
                 <h3 class="my-2">ToDo</h3>
                 <ul class="list-group flex-wrap justify-content-between current-tasks" id="currentTasks" style="min-height: 100px">
@@ -73,7 +76,7 @@
                         <div class="form-group row">
                             <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputTitle" placeholder="Title" required="">
+                                <input type="text" class="form-control" id="inputTitle" placeholder="Title" required="" value="">
                             </div>
                         </div>
                         <div class="form-group row">

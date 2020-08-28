@@ -6,4 +6,4 @@ export const runLoading = () => {
             </div>
         </div>
     `)
-}
+} 
