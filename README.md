@@ -5,9 +5,4 @@ On the website, you can add a to do list by filling in the fields of the card an
 After adding a task, you can mark the task as completed, edit it, or delete it. If the task is marked as completed it goes to the completed field. The site also displays a counter of current affairs and completed tasks. 
 The site has tasks sorting by date, and settings in which you can change the site theme. LocalStorage was used as storage.
 
-Technology stack :
-
-HTML5
-CSS
-Bootstrap
-JavaScript
+Technology stack: HTML5, CSS3, Bootstrap, JavaScript
